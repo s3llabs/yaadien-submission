@@ -23,6 +23,21 @@ Yaadein gives you the right questions, in the right order, and gets out of the w
 
 ### The four-rung framework
 
+The four rungs spell **YAAD**:
+
+| Rung | Name | Asks for |
+|---|---|---|
+| **Y** | **Yesteryears** | Dates, places, names. A stranger could answer it. Costs nothing — its only job is to make the next rung possible. |
+| **A** | **Atmosphere** | What it was actually like — smell, sound, what was in the room, what their hands were doing. |
+| **A** | **Afterword** | What they made of it — regret, pride, judgment. Now they have to think. |
+| **D** | **Disclosure** | The thing they have never put into words *for you*. |
+
+> *The deepest rung invites, it never corners. Never presume trauma or force disclosure.*
+
+Each rung has **three question options**, written on demand by the model. The
+asker can switch between them, reject one to get another, or — once all three
+exist — write their own question instead. The thread only ends when the
+respondent passes on all three. The asker is never dead-ended.
 
 ---
 
@@ -34,10 +49,10 @@ Yaadein gives you the right questions, in the right order, and gets out of the w
 2. **Start a thread** — pick a topic from a prompt pack or write your own, say
    who you're asking, set anything that's off-limits, choose English or हिन्दी.
 3. **Share the 5-character code** (or the join link) with the person you're asking.
-4. They **join, confirm their profile and record** their answer to L1.
+4. They **join, confirm their profile and record** their answer to the first rung.
 5. You review the next question — **accept, reject for a new one, or substitute
    your own** — and it goes straight to their device.
-6. Climb **L1 → L2 → L3 → L4**, one rung at a time.
+6. Climb **Y → A → A → D**, one rung at a time.
 7. **Read the transcript together**, take a short survey, and optionally
    **swap roles** so they can interview you next.
 
