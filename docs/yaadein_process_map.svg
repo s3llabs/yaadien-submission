@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2100 1360" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <style>
+      .lane-hitl { fill:#FFF6D6; }
+      .lane-det  { fill:#E3EEFF; }
+      .lane-prob { fill:#F1E3F5; }
+      .lane-label { font-size:20px; font-weight:700; fill:#333; }
+      .title { font-size:28px; font-weight:800; fill:#111; }
+      .sub { font-size:14px; fill:#555; }
+      .node rect { stroke:#222; stroke-width:1.5; rx:10; ry:10; }
+      .node .n-hitl { fill:#FFE28A; }
+      .node .n-det  { fill:#9EC2FF; }
+      .node .n-prob { fill:#D8A6E0; }
+      .node text.lbl { font-size:14px; font-weight:700; fill:#111; }
+      .node text.note { font-size:11px; fill:#333; }
+      .edge { stroke:#333; stroke-width:1.6; fill:none; }
+      .dashed { stroke-dasharray:6 4; }
+      .dotted { stroke-dasharray:2 4; stroke:#777; }
+      .edge-lbl { font-size:11px; fill:#333; }
+      .ann { font-size:12px; fill:#444; font-style:italic; }
+    </style>
+  </defs>
+
+  <text x="40" y="40" class="title">Yaadein — Essence Process Map</text>
+  <text x="40" y="62" class="sub">Asker ↔ Teller session loop · YAAD ladder L1–L4 · three lanes</text>
+
+  <!-- lanes -->
+  <rect class="lane-hitl" x="40"  y="90"   width="2020" height="340"/>
+  <rect class="lane-det"  x="40"  y="440"  width="2020" height="340"/>
+  <rect class="lane-prob" x="40"  y="790"  width="2020" height="340"/>
+  <text x="60" y="118" class="lane-label">Human-in-the-loop</text>
+  <text x="60" y="468" class="lane-label">Deterministic (code / rules)</text>
+  <text x="60" y="818" class="lane-label">Probabilistic (LLM)</text>
+
+  <!-- helper macro: node = rect 180x80 -->
+  <!-- HITL row y=160 -->
+  <g class="node"><rect class="n-hitl" x="80"   y="160" width="180" height="80"/><text class="lbl" x="170" y="195" text-anchor="middle">Consent + role</text><text class="note" x="170" y="215" text-anchor="middle">EN/HI · Asker/Teller</text></g>
+  <g class="node"><rect class="n-hitl" x="300"  y="160" width="180" height="80"/><text class="lbl" x="390" y="195" text-anchor="middle">Setup thread</text><text class="note" x="390" y="215" text-anchor="middle">topic · rung target</text></g>
+  <g class="node"><rect class="n-hitl" x="760"  y="160" width="200" height="80"/><text class="lbl" x="860" y="190" text-anchor="middle">Asker: accept / edit /</text><text class="lbl" x="860" y="208" text-anchor="middle">skip question</text><text class="note" x="860" y="226" text-anchor="middle">Asker stays in charge</text></g>
+  <g class="node"><rect class="n-hitl" x="1000" y="160" width="180" height="80"/><text class="lbl" x="1090" y="195" text-anchor="middle">Teller answers</text><text class="note" x="1090" y="215" text-anchor="middle">spoken · any language</text></g>
+  <g class="node"><rect class="n-hitl" x="1440" y="160" width="200" height="80"/><text class="lbl" x="1540" y="190" text-anchor="middle">Asker reacts /</text><text class="lbl" x="1540" y="208" text-anchor="middle">passes turn</text><text class="note" x="1540" y="226" text-anchor="middle">reciprocity</text></g>
+  <g class="node"><rect class="n-hitl" x="1860" y="160" width="180" height="80"/><text class="lbl" x="1950" y="190" text-anchor="middle">Review keepsake</text><text class="lbl" x="1950" y="208" text-anchor="middle">+ diff</text></g>
+
+  <!-- DET row y=510 -->
+  <g class="node"><rect class="n-det" x="300"  y="510" width="180" height="80"/><text class="lbl" x="390" y="540" text-anchor="middle">Session schema</text><text class="note" x="390" y="560" text-anchor="middle">rung · refusals · topics</text></g>
+  <g class="node"><rect class="n-det" x="540"  y="510" width="180" height="80"/><text class="lbl" x="630" y="540" text-anchor="middle">Rule checks</text><text class="note" x="630" y="560" text-anchor="middle">POV · format · accusation</text></g>
+  <g class="node"><rect class="n-det" x="760"  y="510" width="200" height="80"/><text class="lbl" x="860" y="540" text-anchor="middle">Guardrail router</text><text class="note" x="860" y="560" text-anchor="middle">pre/post/show/session</text></g>
+  <g class="node"><rect class="n-det" x="1000" y="510" width="180" height="80"/><text class="lbl" x="1090" y="540" text-anchor="middle">ASR + diarize</text><text class="note" x="1090" y="560" text-anchor="middle">EN+HI code-switch</text></g>
+  <g class="node"><rect class="n-det" x="1220" y="510" width="180" height="80"/><text class="lbl" x="1310" y="540" text-anchor="middle">Persist + refusal</text><text class="note" x="1310" y="560" text-anchor="middle">append · no-go flags</text></g>
+  <g class="node"><rect class="n-det" x="1440" y="510" width="200" height="80"/><text class="lbl" x="1540" y="540" text-anchor="middle">KPI counters</text><text class="note" x="1540" y="560" text-anchor="middle">novel · depth · landing</text></g>
+  <g class="node"><rect class="n-det" x="1860" y="510" width="180" height="80"/><text class="lbl" x="1950" y="540" text-anchor="middle">Keepsake export</text><text class="note" x="1950" y="560" text-anchor="middle">voice · transcript · diff</text></g>
+
+  <!-- PROB row y=860 -->
+  <g class="node"><rect class="n-prob" x="540"  y="860" width="180" height="80"/><text class="lbl" x="630" y="890" text-anchor="middle">Question Engine</text><text class="note" x="630" y="910" text-anchor="middle">draft next Q · rung-aware</text></g>
+  <g class="node"><rect class="n-prob" x="760"  y="860" width="200" height="80"/><text class="lbl" x="860" y="890" text-anchor="middle">Second-model critic</text><text class="note" x="860" y="910" text-anchor="middle">LLM-as-judge</text></g>
+  <g class="node"><rect class="n-prob" x="1220" y="860" width="180" height="80"/><text class="lbl" x="1310" y="890" text-anchor="middle">Answer scorer</text><text class="note" x="1310" y="910" text-anchor="middle">depth · disclosure · shift</text></g>
+  <g class="node"><rect class="n-prob" x="1680" y="860" width="200" height="80"/><text class="lbl" x="1780" y="890" text-anchor="middle">Evaluators</text><text class="note" x="1780" y="910" text-anchor="middle">golden pairs L1–L4</text></g>
+
+  <!-- edges -->
+  <!-- consent -> setup -->
+  <path class="edge" d="M260,200 L300,200" marker-end="url(#arrow)"/>
+  <!-- setup -> schema -->
+  <path class="edge" d="M390,240 L390,510" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="398" y="380">write</text>
+  <!-- schema -> QE -->
+  <path class="edge" d="M450,590 L600,860" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="500" y="720">context</text>
+  <!-- QE -> rules -->
+  <path class="edge" d="M630,860 L630,590" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="638" y="740">draft</text>
+  <!-- rules -> critic -->
+  <path class="edge" d="M720,560 L820,860" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="760" y="720">flag/pass</text>
+  <!-- critic -> guardrail -->
+  <path class="edge" d="M860,860 L860,590" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="868" y="740">verdict</text>
+  <!-- guardrail -> asker -->
+  <path class="edge" d="M860,510 L860,240" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="868" y="400">show Q</text>
+  <!-- guardrail -> QE regenerate (dashed) -->
+  <path class="edge dashed" d="M780,540 Q680,700 630,860" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="640" y="700">regenerate</text>
+  <!-- asker -> teller -->
+  <path class="edge" d="M960,200 L1000,200" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="965" y="192">ask</text>
+  <!-- asker -> schema (skip refusal) dashed -->
+  <path class="edge dashed" d="M820,240 L450,510" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="600" y="370">skip → refusal</text>
+  <!-- teller -> ASR -->
+  <path class="edge" d="M1090,240 L1090,510" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="1098" y="380">audio</text>
+  <!-- ASR -> scorer -->
+  <path class="edge" d="M1180,560 L1260,860" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="1200" y="720">transcript</text>
+  <!-- scorer -> persist -->
+  <path class="edge" d="M1310,860 L1310,590" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="1318" y="740">scored</text>
+  <!-- persist -> kpi -->
+  <path class="edge" d="M1400,550 L1440,550" marker-end="url(#arrow)"/>
+  <!-- persist -> schema (update) -->
+  <path class="edge dashed" d="M1220,550 Q800,620 480,550" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="820" y="608">update state</text>
+  <!-- kpi -> asker reacts -->
+  <path class="edge" d="M1540,510 L1540,240" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="1548" y="400">surface cue</text>
+  <!-- asker reacts -> QE (next turn) dashed -->
+  <path class="edge dashed" d="M1440,200 Q900,120 630,860" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="900" y="110">next turn</text>
+  <!-- asker reacts -> review -->
+  <path class="edge" d="M1640,200 L1860,200" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="1710" y="192">end session</text>
+  <!-- review -> export -->
+  <path class="edge" d="M1950,240 L1950,510" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="1958" y="380">save</text>
+  <!-- evals -> QE (dotted) -->
+  <path class="edge dotted" d="M1680,900 Q1150,1000 720,900" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="1150" y="1000">offline tuning → QE</text>
+  <!-- evals -> critic (dotted) -->
+  <path class="edge dotted" d="M1680,880 Q1300,960 960,880" marker-end="url(#arrow)"/>
+  <text class="edge-lbl" x="1300" y="958">offline tuning → critic</text>
+
+  <!-- annotations -->
+  <text class="ann" x="60" y="1180">YAAD ladder: L1 Yarn → L2 Anchor → L3 Admit → L4 Diff. Rung set at setup, updated by scorer.</text>
+  <text class="ann" x="60" y="1210">Guardrail stack = rule checks (deterministic) + second-model critic (probabilistic). Both gate every Q before Asker sees it.</text>
+  <text class="ann" x="60" y="1240">Dashed = loop / skip. Dotted = offline eval feedback. Solid = in-session flow.</text>
+  <text class="ann" x="60" y="1270">Every probabilistic step wrapped by a deterministic gate before reaching a human.</text>
+</svg>

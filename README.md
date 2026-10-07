@@ -63,6 +63,15 @@ No second device, no review step, no sharing required. Private to you.
 
 ---
 
+## Workflow
+
+Session loop between Asker and Teller across three lanes — human-in-the-loop,
+deterministic rules, and probabilistic model calls.
+
+![Yaadein process map](docs/yaadein_process_map.svg)
+
+---
+
 ## Features
 
 - **🎙 Voice-first recording** — `MediaRecorder` in the browser with
