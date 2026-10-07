@@ -204,7 +204,11 @@ apps-script/    Google Apps Script — Sheet logger, Drive uploader, Supabase ex
 docs/           Developer guide, data schema, guardrails, evaluators, runbooks
 mvp/            The original terminal prototype the framework was written in
 evals/          Golden input→output pairs for the question engine
+guardrails/     Rule-check and second-model-critic specs
+flow-charts/    Process maps (master + per-round)
+scripts/        One-off dev scripts (blob + service smoke tests)
 branding-kit/   Typography rules and font licences
+logo/           Brand marks and inspiration
 ```
 
 ---
