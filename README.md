@@ -23,19 +23,6 @@ Yaadein gives you the right questions, in the right order, and gets out of the w
 
 ### The four-rung framework
 
-| Rung | Name | Asks for |
-|---|---|---|
-| **L1** | **Facts** | Dates, places, names. A stranger could answer it. Costs nothing — its only job is to make L2 possible. |
-| **L2** | **Experience** | What it was actually like — smell, sound, what was in the room, what their hands were doing. |
-| **L3** | **Meaning** | What they made of it — regret, pride, judgment. Now they have to think. |
-| **L4** | **Exposure** | The thing they have never put into words *for you*. |
-
-> *L4 invites, it never corners. Never presume trauma or force disclosure.*
-
-Each rung has **three question options**, written on demand by the model. The
-asker can switch between them, reject one to get another, or — once all three
-exist — write their own question instead. The thread only ends when the
-respondent passes on all three. The asker is never dead-ended.
 
 ---
 
