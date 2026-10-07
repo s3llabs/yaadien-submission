@@ -1,130 +1,230 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2100 1360" font-family="Inter, system-ui, sans-serif">
-  <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
-    </marker>
-    <style>
-      .lane-hitl { fill:#FFF6D6; }
-      .lane-det  { fill:#E3EEFF; }
-      .lane-prob { fill:#F1E3F5; }
-      .lane-label { font-size:20px; font-weight:700; fill:#333; }
-      .title { font-size:28px; font-weight:800; fill:#111; }
-      .sub { font-size:14px; fill:#555; }
-      .node rect { stroke:#222; stroke-width:1.5; rx:10; ry:10; }
-      .node .n-hitl { fill:#FFE28A; }
-      .node .n-det  { fill:#9EC2FF; }
-      .node .n-prob { fill:#D8A6E0; }
-      .node text.lbl { font-size:14px; font-weight:700; fill:#111; }
-      .node text.note { font-size:11px; fill:#333; }
-      .edge { stroke:#333; stroke-width:1.6; fill:none; }
-      .dashed { stroke-dasharray:6 4; }
-      .dotted { stroke-dasharray:2 4; stroke:#777; }
-      .edge-lbl { font-size:11px; fill:#333; }
-      .ann { font-size:12px; fill:#444; font-style:italic; }
-    </style>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 2050" font-family="Inter, system-ui, sans-serif">
+  <rect x="0" y="0" width="900" height="2050" fill="#F3EEE4"/>
 
-  <text x="40" y="40" class="title">Yaadein — Essence Process Map</text>
-  <text x="40" y="62" class="sub">Asker ↔ Teller session loop · YAAD ladder L1–L4 · three lanes</text>
+  <text x="40" y="46" font-size="14" font-weight="700" fill="#2b2b2b" letter-spacing="2">YAADEIN — APP FLOW</text>
 
-  <!-- lanes -->
-  <rect class="lane-hitl" x="40"  y="90"   width="2020" height="340"/>
-  <rect class="lane-det"  x="40"  y="440"  width="2020" height="340"/>
-  <rect class="lane-prob" x="40"  y="790"  width="2020" height="340"/>
-  <text x="60" y="118" class="lane-label">Human-in-the-loop</text>
-  <text x="60" y="468" class="lane-label">Deterministic (code / rules)</text>
-  <text x="60" y="818" class="lane-label">Probabilistic (LLM)</text>
+  <!-- Legend -->
+  <g>
+    <rect x="620" y="26" width="240" height="110" rx="8" ry="8" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="1"/>
+    <text x="632" y="46" font-size="11" font-weight="700" fill="#2b2b2b" letter-spacing="1.5">LEGEND</text>
+    <rect x="632" y="56" width="18" height="14" rx="7" ry="7" fill="#1F6E57"/>
+    <text x="658" y="67" font-size="11" fill="#2b2b2b">Human-in-the-loop</text>
+    <rect x="632" y="76" width="18" height="14" rx="7" ry="7" fill="#E2B23A"/>
+    <text x="658" y="87" font-size="11" fill="#2b2b2b">Deterministic (code / rules)</text>
+    <rect x="632" y="96" width="18" height="14" rx="7" ry="7" fill="#6E4BB0"/>
+    <text x="658" y="107" font-size="11" fill="#2b2b2b">Probabilistic (LLM)</text>
+    <rect x="632" y="116" width="18" height="14" rx="7" ry="7" fill="#1a1a1a"/>
+    <text x="658" y="127" font-size="11" fill="#2b2b2b">Start / End</text>
+  </g>
 
-  <!-- helper macro: node = rect 180x80 -->
-  <!-- HITL row y=160 -->
-  <g class="node"><rect class="n-hitl" x="80"   y="160" width="180" height="80"/><text class="lbl" x="170" y="195" text-anchor="middle">Consent + role</text><text class="note" x="170" y="215" text-anchor="middle">EN/HI · Asker/Teller</text></g>
-  <g class="node"><rect class="n-hitl" x="300"  y="160" width="180" height="80"/><text class="lbl" x="390" y="195" text-anchor="middle">Setup thread</text><text class="note" x="390" y="215" text-anchor="middle">topic · rung target</text></g>
-  <g class="node"><rect class="n-hitl" x="760"  y="160" width="200" height="80"/><text class="lbl" x="860" y="190" text-anchor="middle">Asker: accept / edit /</text><text class="lbl" x="860" y="208" text-anchor="middle">skip question</text><text class="note" x="860" y="226" text-anchor="middle">Asker stays in charge</text></g>
-  <g class="node"><rect class="n-hitl" x="1000" y="160" width="180" height="80"/><text class="lbl" x="1090" y="195" text-anchor="middle">Teller answers</text><text class="note" x="1090" y="215" text-anchor="middle">spoken · any language</text></g>
-  <g class="node"><rect class="n-hitl" x="1440" y="160" width="200" height="80"/><text class="lbl" x="1540" y="190" text-anchor="middle">Asker reacts /</text><text class="lbl" x="1540" y="208" text-anchor="middle">passes turn</text><text class="note" x="1540" y="226" text-anchor="middle">reciprocity</text></g>
-  <g class="node"><rect class="n-hitl" x="1860" y="160" width="180" height="80"/><text class="lbl" x="1950" y="190" text-anchor="middle">Review keepsake</text><text class="lbl" x="1950" y="208" text-anchor="middle">+ diff</text></g>
+  <!-- START -->
+  <g>
+    <rect x="370" y="160" width="160" height="38" rx="19" ry="19" fill="#1a1a1a"/>
+    <text x="450" y="184" text-anchor="middle" font-size="12" font-weight="700" fill="#F3EEE4" letter-spacing="2">START</text>
+  </g>
 
-  <!-- DET row y=510 -->
-  <g class="node"><rect class="n-det" x="300"  y="510" width="180" height="80"/><text class="lbl" x="390" y="540" text-anchor="middle">Session schema</text><text class="note" x="390" y="560" text-anchor="middle">rung · refusals · topics</text></g>
-  <g class="node"><rect class="n-det" x="540"  y="510" width="180" height="80"/><text class="lbl" x="630" y="540" text-anchor="middle">Rule checks</text><text class="note" x="630" y="560" text-anchor="middle">POV · format · accusation</text></g>
-  <g class="node"><rect class="n-det" x="760"  y="510" width="200" height="80"/><text class="lbl" x="860" y="540" text-anchor="middle">Guardrail router</text><text class="note" x="860" y="560" text-anchor="middle">pre/post/show/session</text></g>
-  <g class="node"><rect class="n-det" x="1000" y="510" width="180" height="80"/><text class="lbl" x="1090" y="540" text-anchor="middle">ASR + diarize</text><text class="note" x="1090" y="560" text-anchor="middle">EN+HI code-switch</text></g>
-  <g class="node"><rect class="n-det" x="1220" y="510" width="180" height="80"/><text class="lbl" x="1310" y="540" text-anchor="middle">Persist + refusal</text><text class="note" x="1310" y="560" text-anchor="middle">append · no-go flags</text></g>
-  <g class="node"><rect class="n-det" x="1440" y="510" width="200" height="80"/><text class="lbl" x="1540" y="540" text-anchor="middle">KPI counters</text><text class="note" x="1540" y="560" text-anchor="middle">novel · depth · landing</text></g>
-  <g class="node"><rect class="n-det" x="1860" y="510" width="180" height="80"/><text class="lbl" x="1950" y="540" text-anchor="middle">Keepsake export</text><text class="note" x="1950" y="560" text-anchor="middle">voice · transcript · diff</text></g>
+  <!-- forward vertical arrows (line + inline triangle head). Triangle points down, tip at (x, y_tip). -->
+  <!-- START -> 1 -->
+  <line x1="450" y1="198" x2="450" y2="226" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,232 444,222 456,222" fill="#2b2b2b"/>
 
-  <!-- PROB row y=860 -->
-  <g class="node"><rect class="n-prob" x="540"  y="860" width="180" height="80"/><text class="lbl" x="630" y="890" text-anchor="middle">Question Engine</text><text class="note" x="630" y="910" text-anchor="middle">draft next Q · rung-aware</text></g>
-  <g class="node"><rect class="n-prob" x="760"  y="860" width="200" height="80"/><text class="lbl" x="860" y="890" text-anchor="middle">Second-model critic</text><text class="note" x="860" y="910" text-anchor="middle">LLM-as-judge</text></g>
-  <g class="node"><rect class="n-prob" x="1220" y="860" width="180" height="80"/><text class="lbl" x="1310" y="890" text-anchor="middle">Answer scorer</text><text class="note" x="1310" y="910" text-anchor="middle">depth · disclosure · shift</text></g>
-  <g class="node"><rect class="n-prob" x="1680" y="860" width="200" height="80"/><text class="lbl" x="1780" y="890" text-anchor="middle">Evaluators</text><text class="note" x="1780" y="910" text-anchor="middle">golden pairs L1–L4</text></g>
+  <!-- 1 Asker invites Teller (H) -->
+  <g>
+    <rect x="240" y="234" width="420" height="44" rx="22" ry="22" fill="#1F6E57"/>
+    <circle cx="266" cy="256" r="12" fill="#FFFFFF"/>
+    <text x="266" y="260" text-anchor="middle" font-size="12" font-weight="700" fill="#1F6E57">1</text>
+    <text x="286" y="260" font-size="12" font-weight="600" fill="#FFFFFF">Asker invites Teller · pick roles · EN or HI</text>
+  </g>
+  <line x1="450" y1="278" x2="450" y2="302" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,308 444,298 456,298" fill="#2b2b2b"/>
 
-  <!-- edges -->
-  <!-- consent -> setup -->
-  <path class="edge" d="M260,200 L300,200" marker-end="url(#arrow)"/>
-  <!-- setup -> schema -->
-  <path class="edge" d="M390,240 L390,510" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="398" y="380">write</text>
-  <!-- schema -> QE -->
-  <path class="edge" d="M450,590 L600,860" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="500" y="720">context</text>
-  <!-- QE -> rules -->
-  <path class="edge" d="M630,860 L630,590" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="638" y="740">draft</text>
-  <!-- rules -> critic -->
-  <path class="edge" d="M720,560 L820,860" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="760" y="720">flag/pass</text>
-  <!-- critic -> guardrail -->
-  <path class="edge" d="M860,860 L860,590" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="868" y="740">verdict</text>
-  <!-- guardrail -> asker -->
-  <path class="edge" d="M860,510 L860,240" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="868" y="400">show Q</text>
-  <!-- guardrail -> QE regenerate (dashed) -->
-  <path class="edge dashed" d="M780,540 Q680,700 630,860" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="640" y="700">regenerate</text>
-  <!-- asker -> teller -->
-  <path class="edge" d="M960,200 L1000,200" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="965" y="192">ask</text>
-  <!-- asker -> schema (skip refusal) dashed -->
-  <path class="edge dashed" d="M820,240 L450,510" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="600" y="370">skip → refusal</text>
-  <!-- teller -> ASR -->
-  <path class="edge" d="M1090,240 L1090,510" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="1098" y="380">audio</text>
-  <!-- ASR -> scorer -->
-  <path class="edge" d="M1180,560 L1260,860" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="1200" y="720">transcript</text>
-  <!-- scorer -> persist -->
-  <path class="edge" d="M1310,860 L1310,590" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="1318" y="740">scored</text>
-  <!-- persist -> kpi -->
-  <path class="edge" d="M1400,550 L1440,550" marker-end="url(#arrow)"/>
-  <!-- persist -> schema (update) -->
-  <path class="edge dashed" d="M1220,550 Q800,620 480,550" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="820" y="608">update state</text>
-  <!-- kpi -> asker reacts -->
-  <path class="edge" d="M1540,510 L1540,240" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="1548" y="400">surface cue</text>
-  <!-- asker reacts -> QE (next turn) dashed -->
-  <path class="edge dashed" d="M1440,200 Q900,120 630,860" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="900" y="110">next turn</text>
-  <!-- asker reacts -> review -->
-  <path class="edge" d="M1640,200 L1860,200" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="1710" y="192">end session</text>
-  <!-- review -> export -->
-  <path class="edge" d="M1950,240 L1950,510" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="1958" y="380">save</text>
-  <!-- evals -> QE (dotted) -->
-  <path class="edge dotted" d="M1680,900 Q1150,1000 720,900" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="1150" y="1000">offline tuning → QE</text>
-  <!-- evals -> critic (dotted) -->
-  <path class="edge dotted" d="M1680,880 Q1300,960 960,880" marker-end="url(#arrow)"/>
-  <text class="edge-lbl" x="1300" y="958">offline tuning → critic</text>
+  <!-- 2 Consent (H) -->
+  <g>
+    <rect x="240" y="310" width="420" height="44" rx="22" ry="22" fill="#1F6E57"/>
+    <circle cx="266" cy="332" r="12" fill="#FFFFFF"/>
+    <text x="266" y="336" text-anchor="middle" font-size="12" font-weight="700" fill="#1F6E57">2</text>
+    <text x="286" y="336" font-size="12" font-weight="600" fill="#FFFFFF">Consent screen · relationship · topic · rung target</text>
+  </g>
+  <line x1="450" y1="354" x2="450" y2="378" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,384 444,374 456,374" fill="#2b2b2b"/>
 
-  <!-- annotations -->
-  <text class="ann" x="60" y="1180">YAAD ladder: L1 Yarn → L2 Anchor → L3 Admit → L4 Diff. Rung set at setup, updated by scorer.</text>
-  <text class="ann" x="60" y="1210">Guardrail stack = rule checks (deterministic) + second-model critic (probabilistic). Both gate every Q before Asker sees it.</text>
-  <text class="ann" x="60" y="1240">Dashed = loop / skip. Dotted = offline eval feedback. Solid = in-session flow.</text>
-  <text class="ann" x="60" y="1270">Every probabilistic step wrapped by a deterministic gate before reaching a human.</text>
+  <!-- 3 Session created (D) -->
+  <g>
+    <rect x="240" y="386" width="420" height="44" rx="22" ry="22" fill="#E2B23A"/>
+    <circle cx="266" cy="408" r="12" fill="#FFFFFF"/>
+    <text x="266" y="412" text-anchor="middle" font-size="12" font-weight="700" fill="#E2B23A">3</text>
+    <text x="286" y="412" font-size="12" font-weight="600" fill="#FFFFFF">Create session state · rung · refusals · topic graph</text>
+  </g>
+  <line x1="450" y1="430" x2="450" y2="454" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,460 444,450 456,450" fill="#2b2b2b"/>
+
+  <text x="450" y="476" text-anchor="middle" font-size="10" font-weight="700" fill="#6b6b6b" letter-spacing="2">┈ PER-TURN LOOP ┈</text>
+
+  <!-- 4 Question Engine draft (P) -->
+  <g>
+    <rect x="240" y="488" width="420" height="44" rx="22" ry="22" fill="#6E4BB0"/>
+    <circle cx="266" cy="510" r="12" fill="#FFFFFF"/>
+    <text x="266" y="514" text-anchor="middle" font-size="12" font-weight="700" fill="#6E4BB0">4</text>
+    <text x="286" y="514" font-size="12" font-weight="600" fill="#FFFFFF">Question Engine drafts next Q (rung + history + refusals)</text>
+  </g>
+  <line x1="450" y1="532" x2="450" y2="556" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,562 444,552 456,552" fill="#2b2b2b"/>
+
+  <!-- 5 Rule checks (D) -->
+  <g>
+    <rect x="240" y="564" width="420" height="44" rx="22" ry="22" fill="#E2B23A"/>
+    <circle cx="266" cy="586" r="12" fill="#FFFFFF"/>
+    <text x="266" y="590" text-anchor="middle" font-size="12" font-weight="700" fill="#E2B23A">5</text>
+    <text x="286" y="590" font-size="12" font-weight="600" fill="#FFFFFF">Rule checks · POV · format · accusation · forced-sensory</text>
+  </g>
+  <line x1="450" y1="608" x2="450" y2="632" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,638 444,628 456,628" fill="#2b2b2b"/>
+
+  <!-- 6 Second-model critic (P) -->
+  <g>
+    <rect x="240" y="640" width="420" height="44" rx="22" ry="22" fill="#6E4BB0"/>
+    <circle cx="266" cy="662" r="12" fill="#FFFFFF"/>
+    <text x="266" y="666" text-anchor="middle" font-size="12" font-weight="700" fill="#6E4BB0">6</text>
+    <text x="286" y="666" font-size="12" font-weight="600" fill="#FFFFFF">Second-model critic · LLM-as-judge · rung fit · safety</text>
+  </g>
+  <line x1="450" y1="684" x2="450" y2="708" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,714 444,704 456,704" fill="#2b2b2b"/>
+
+  <!-- 7 Guardrail router (D) -->
+  <g>
+    <rect x="240" y="716" width="420" height="44" rx="22" ry="22" fill="#E2B23A"/>
+    <circle cx="266" cy="738" r="12" fill="#FFFFFF"/>
+    <text x="266" y="742" text-anchor="middle" font-size="12" font-weight="700" fill="#E2B23A">7</text>
+    <text x="286" y="742" font-size="12" font-weight="600" fill="#FFFFFF">Guardrail router · pass → show · fail → regenerate</text>
+  </g>
+  <!-- regenerate loop: 7 -> 4, exits right of 7, enters right of 4. Dashed, left-pointing arrow at tip (660,510) -->
+  <path d="M660,738 L740,738 L740,510 L666,510" stroke="#2b2b2b" stroke-width="1.4" stroke-dasharray="6 4" fill="none"/>
+  <polygon points="660,510 670,504 670,516" fill="#2b2b2b"/>
+  <text x="748" y="624" font-size="10" fill="#6b6b6b" transform="rotate(90 748 624)">regenerate</text>
+  <line x1="450" y1="760" x2="450" y2="784" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,790 444,780 456,780" fill="#2b2b2b"/>
+
+  <!-- 8 Asker reads / edits / skips (H) -->
+  <g>
+    <rect x="240" y="792" width="420" height="44" rx="22" ry="22" fill="#1F6E57"/>
+    <circle cx="266" cy="814" r="12" fill="#FFFFFF"/>
+    <text x="266" y="818" text-anchor="middle" font-size="12" font-weight="700" fill="#1F6E57">8</text>
+    <text x="286" y="818" font-size="12" font-weight="600" fill="#FFFFFF">Asker reads · accepts · edits · or skips question</text>
+  </g>
+  <!-- skip -> refusal: 8 -> 3 left side, right-pointing arrow tip at (240,408) -->
+  <path d="M240,814 L160,814 L160,408 L234,408" stroke="#2b2b2b" stroke-width="1.4" stroke-dasharray="6 4" fill="none"/>
+  <polygon points="240,408 230,402 230,414" fill="#2b2b2b"/>
+  <text x="138" y="614" font-size="10" fill="#6b6b6b" transform="rotate(-90 138 614)">skip → refusal</text>
+  <line x1="450" y1="836" x2="450" y2="860" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,866 444,856 456,856" fill="#2b2b2b"/>
+
+  <!-- 9 Teller answers (H) -->
+  <g>
+    <rect x="240" y="868" width="420" height="44" rx="22" ry="22" fill="#1F6E57"/>
+    <circle cx="266" cy="890" r="12" fill="#FFFFFF"/>
+    <text x="266" y="894" text-anchor="middle" font-size="12" font-weight="700" fill="#1F6E57">9</text>
+    <text x="286" y="894" font-size="12" font-weight="600" fill="#FFFFFF">Teller answers aloud · any language</text>
+  </g>
+  <line x1="450" y1="912" x2="450" y2="936" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,942 444,932 456,932" fill="#2b2b2b"/>
+
+  <!-- 10 ASR + diarize (D) -->
+  <g>
+    <rect x="240" y="944" width="420" height="44" rx="22" ry="22" fill="#E2B23A"/>
+    <circle cx="266" cy="966" r="12" fill="#FFFFFF"/>
+    <text x="263" y="970" text-anchor="middle" font-size="11" font-weight="700" fill="#E2B23A">10</text>
+    <text x="286" y="970" font-size="12" font-weight="600" fill="#FFFFFF">ASR + diarize · EN · HI · code-switch</text>
+  </g>
+  <line x1="450" y1="988" x2="450" y2="1012" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,1018 444,1008 456,1008" fill="#2b2b2b"/>
+
+  <!-- 11 Answer scorer (P) -->
+  <g>
+    <rect x="240" y="1020" width="420" height="44" rx="22" ry="22" fill="#6E4BB0"/>
+    <circle cx="266" cy="1042" r="12" fill="#FFFFFF"/>
+    <text x="263" y="1046" text-anchor="middle" font-size="11" font-weight="700" fill="#6E4BB0">11</text>
+    <text x="286" y="1046" font-size="12" font-weight="600" fill="#FFFFFF">Answer scorer · depth · disclosure · insight shift</text>
+  </g>
+  <line x1="450" y1="1064" x2="450" y2="1088" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,1094 444,1084 456,1084" fill="#2b2b2b"/>
+
+  <!-- 12 Persist + update state (D) -->
+  <g>
+    <rect x="240" y="1096" width="420" height="44" rx="22" ry="22" fill="#E2B23A"/>
+    <circle cx="266" cy="1118" r="12" fill="#FFFFFF"/>
+    <text x="263" y="1122" text-anchor="middle" font-size="11" font-weight="700" fill="#E2B23A">12</text>
+    <text x="286" y="1122" font-size="12" font-weight="600" fill="#FFFFFF">Persist turn · update refusals · bump rung</text>
+  </g>
+  <line x1="450" y1="1140" x2="450" y2="1164" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,1170 444,1160 456,1160" fill="#2b2b2b"/>
+
+  <!-- 13 KPI counters (D) -->
+  <g>
+    <rect x="240" y="1172" width="420" height="44" rx="22" ry="22" fill="#E2B23A"/>
+    <circle cx="266" cy="1194" r="12" fill="#FFFFFF"/>
+    <text x="263" y="1198" text-anchor="middle" font-size="11" font-weight="700" fill="#E2B23A">13</text>
+    <text x="286" y="1198" font-size="12" font-weight="600" fill="#FFFFFF">KPIs update · novel · landing · depth · reciprocity</text>
+  </g>
+  <line x1="450" y1="1216" x2="450" y2="1240" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,1246 444,1236 456,1236" fill="#2b2b2b"/>
+
+  <!-- 14 Asker reacts / decide (H) -->
+  <g>
+    <rect x="240" y="1248" width="420" height="44" rx="22" ry="22" fill="#1F6E57"/>
+    <circle cx="266" cy="1270" r="12" fill="#FFFFFF"/>
+    <text x="263" y="1274" text-anchor="middle" font-size="11" font-weight="700" fill="#1F6E57">14</text>
+    <text x="286" y="1274" font-size="12" font-weight="600" fill="#FFFFFF">Asker reacts · pass turn · continue · or end session</text>
+  </g>
+  <!-- next turn: 14 -> 4, left side, right-pointing arrow tip at (240,510) -->
+  <path d="M240,1270 L120,1270 L120,510 L234,510" stroke="#2b2b2b" stroke-width="1.4" stroke-dasharray="6 4" fill="none"/>
+  <polygon points="240,510 230,504 230,516" fill="#2b2b2b"/>
+  <text x="100" y="880" font-size="10" fill="#6b6b6b" transform="rotate(-90 100 880)">next turn</text>
+  <line x1="450" y1="1292" x2="450" y2="1316" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,1322 444,1312 456,1312" fill="#2b2b2b"/>
+
+  <text x="450" y="1338" text-anchor="middle" font-size="10" font-weight="700" fill="#6b6b6b" letter-spacing="2">┈ END OF SESSION ┈</text>
+
+  <!-- 15 Review keepsake + diff (H) -->
+  <g>
+    <rect x="240" y="1350" width="420" height="44" rx="22" ry="22" fill="#1F6E57"/>
+    <circle cx="266" cy="1372" r="12" fill="#FFFFFF"/>
+    <text x="263" y="1376" text-anchor="middle" font-size="11" font-weight="700" fill="#1F6E57">15</text>
+    <text x="286" y="1376" font-size="12" font-weight="600" fill="#FFFFFF">Both review keepsake · voice clip + transcript diff</text>
+  </g>
+  <line x1="450" y1="1394" x2="450" y2="1418" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,1424 444,1414 456,1414" fill="#2b2b2b"/>
+
+  <!-- 16 Export (D) -->
+  <g>
+    <rect x="240" y="1426" width="420" height="44" rx="22" ry="22" fill="#E2B23A"/>
+    <circle cx="266" cy="1448" r="12" fill="#FFFFFF"/>
+    <text x="263" y="1452" text-anchor="middle" font-size="11" font-weight="700" fill="#E2B23A">16</text>
+    <text x="286" y="1452" font-size="12" font-weight="600" fill="#FFFFFF">Export · voice + transcript + diff · encrypted at rest</text>
+  </g>
+  <line x1="450" y1="1470" x2="450" y2="1494" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,1500 444,1490 456,1490" fill="#2b2b2b"/>
+
+  <!-- 17 Evaluators (P) -->
+  <g>
+    <rect x="240" y="1502" width="420" height="44" rx="22" ry="22" fill="#6E4BB0"/>
+    <circle cx="266" cy="1524" r="12" fill="#FFFFFF"/>
+    <text x="263" y="1528" text-anchor="middle" font-size="11" font-weight="700" fill="#6E4BB0">17</text>
+    <text x="286" y="1528" font-size="12" font-weight="600" fill="#FFFFFF">Evaluators run offline · golden pairs L1–L4 · tune Q engine</text>
+  </g>
+  <line x1="450" y1="1546" x2="450" y2="1570" stroke="#2b2b2b" stroke-width="1.6"/>
+  <polygon points="450,1576 444,1566 456,1566" fill="#2b2b2b"/>
+
+  <!-- END -->
+  <g>
+    <rect x="370" y="1578" width="160" height="38" rx="19" ry="19" fill="#1a1a1a"/>
+    <text x="450" y="1602" text-anchor="middle" font-size="12" font-weight="700" fill="#F3EEE4" letter-spacing="2">END</text>
+  </g>
+
+  <!-- Notes -->
+  <text x="40" y="1700" font-size="11" font-weight="700" fill="#2b2b2b" letter-spacing="1.5">NOTES</text>
+  <text x="40" y="1722" font-size="11" fill="#2b2b2b">• YAAD ladder: L1 Yarn → L2 Anchor → L3 Admit → L4 Diff. Rung target set at step 2, bumped by scorer at step 11.</text>
+  <text x="40" y="1742" font-size="11" fill="#2b2b2b">• Guardrail stack = rule checks (step 5, deterministic) + second-model critic (step 6, probabilistic). Both gate every Q.</text>
+  <text x="40" y="1762" font-size="11" fill="#2b2b2b">• Dashed arrows = loops (regenerate, next turn, skip-to-refusal). Solid = forward flow.</text>
+  <text x="40" y="1782" font-size="11" fill="#2b2b2b">• Every probabilistic step (purple) is wrapped by a deterministic gate (yellow) before reaching a human (green).</text>
+  <text x="40" y="1802" font-size="11" fill="#2b2b2b">• Evaluators (step 17) run offline against golden pairs — results tune the Question Engine and critic weights.</text>
 </svg>

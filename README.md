@@ -65,8 +65,9 @@ No second device, no review step, no sharing required. Private to you.
 
 ## Workflow
 
-Session loop between Asker and Teller across three lanes — human-in-the-loop,
-deterministic rules, and probabilistic model calls.
+End-to-end session flow from invite to export. Each step is colored by type —
+human-in-the-loop (green), deterministic rules (yellow), probabilistic model
+calls (purple). Dashed arrows are loops: regenerate, next turn, skip-to-refusal.
 
 ![Yaadein process map](docs/yaadein_process_map.svg)
 
